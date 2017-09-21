@@ -1,4 +1,4 @@
-package gasMileage;
+package com.paratusSoftware.carTracker.gasMileage;
 
 import java.util.Calendar;
 import java.util.Date;
