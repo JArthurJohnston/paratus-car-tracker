@@ -1,0 +1,142 @@
+swagger: '2.0'
+info:
+  description: a logger an aggregator for my car's data
+  version: 0.0.1
+  title: Paratus Car Tracker
+  termsOfService: 'https://google.com'
+  contact:
+    name: N/A
+  license:
+    name: N/A
+    url: 'https://google.com'
+host: 'localhost:8080'
+basePath: /
+tags:
+  - name: mileage-controller
+    description: Mileage Controller
+paths:
+  /mileage/add:
+    post:
+      tags:
+        - mileage-controller
+      summary: addMileage
+      operationId: addMileageUsingPOST
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        - in: body
+          name: mileage
+          description: mileage
+          required: true
+          schema:
+            $ref: '#/definitions/Mileage'
+      responses:
+        '200':
+          description: OK
+        '201':
+          description: Created
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /mileage/all:
+    get:
+      tags:
+        - mileage-controller
+      summary: allMileages
+      operationId: allMileagesUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        - name: latitude
+          in: query
+          description: latitude
+          required: false
+          type: integer
+          format: int64
+        - name: longitude
+          in: query
+          description: longitude
+          required: false
+          type: integer
+          format: int64
+        - name: mileage
+          in: query
+          description: mileage
+          required: false
+          type: number
+          format: float
+      responses:
+        '200':
+          description: OK
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Mileage'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+  /mileage/reflect:
+    get:
+      tags:
+        - mileage-controller
+      summary: reflectMileage
+      operationId: reflectMileageUsingGET
+      consumes:
+        - application/json
+      produces:
+        - '*/*'
+      parameters:
+        - name: latitude
+          in: query
+          description: latitude
+          required: false
+          type: integer
+          format: int64
+        - name: longitude
+          in: query
+          description: longitude
+          required: false
+          type: integer
+          format: int64
+        - name: mileage
+          in: query
+          description: mileage
+          required: false
+          type: number
+          format: float
+      responses:
+        '200':
+          description: OK
+          schema:
+            $ref: '#/definitions/Mileage'
+        '401':
+          description: Unauthorized
+        '403':
+          description: Forbidden
+        '404':
+          description: Not Found
+definitions:
+  Mileage:
+    properties:
+      latitude:
+        type: integer
+        format: int64
+      longitude:
+        type: integer
+        format: int64
+      mileage:
+        type: number
+        format: float
+      timestamp:
+        type: string
+        format: date-time
