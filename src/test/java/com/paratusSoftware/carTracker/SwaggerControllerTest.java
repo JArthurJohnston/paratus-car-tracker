@@ -1,14 +1,15 @@
 package com.paratusSoftware.carTracker;
 
+
 import com.paratusSoftware.carTracker.documentation.SwaggerController;
-import org.junit.jupiter.api.Test;
+import org.junit.Test;
 
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static junit.framework.TestCase.assertEquals;
 
-class SwaggerControllerTest {
+public class SwaggerControllerTest {
 
     @Test
     public void testGetsJsonFile() throws Exception{

@@ -13,7 +13,7 @@
       "url": "https://google.com"
     }
   },
-  "host": "https://mileage-tracker.cfapps.io",
+  "host": "mileage-tracker.cfapps.io",
   "basePath": "/",
   "tags": [
     {
