@@ -7,7 +7,7 @@ import java.util.Scanner;
 public class FileReader {
 
     public static final String FILE_ERROR_MESSAGE = "Could not open file";
-    public static final String NEWLINE = "\n\r";
+    public static final String NEWLINE = "\n";
 
     public static String contentFrom(String fileName){
         StringBuilder result = new StringBuilder("");
