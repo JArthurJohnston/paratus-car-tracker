@@ -26,4 +26,8 @@ public class MileageController {
         return service.getAll();
     }
 
+    @RequestMapping(method = RequestMethod.GET, path = "/{id}")
+    public Mileage getWithId(@PathVariable("id") int id){
+        return service.getById(id);
+    }
 }
