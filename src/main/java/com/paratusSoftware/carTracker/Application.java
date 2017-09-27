@@ -14,6 +14,8 @@ import springfox.documentation.spi.DocumentationType;
 import springfox.documentation.spring.web.plugins.Docket;
 import springfox.documentation.swagger2.annotations.EnableSwagger2;
 
+import static springfox.documentation.builders.PathSelectors.regex;
+
 
 @EnableSwagger2
 @SpringBootApplication
@@ -31,12 +33,11 @@ public class Application {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build()
-                .pathMapping("/");
+                .build();
     }
 
     private Predicate<String> ignoreErrorController(){
-        return Predicates.not(PathSelectors.regex("/basic-error-controller.*"));
+        return Predicates.not(regex("/basic-error-controller.*"));
     }
 
     //for some reason this was breaking swagger
