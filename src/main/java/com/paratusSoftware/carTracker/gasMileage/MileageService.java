@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 @Service
 public class MileageService {
 
+    @Autowired
     private MileageRepository repository;
 
-    @Autowired
     public MileageService(MileageRepository repository){
         this.repository = repository;
     }

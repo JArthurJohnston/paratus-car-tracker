@@ -29,7 +29,7 @@ public class SwaggerController {
                 "      \"url\": \"https://google.com\"\n" +
                 "    }\n" +
                 "  },\n" +
-                "  \"host\": \"https://mileage-tracker.cfapps.io\",\n" +
+                "  \"host\": \"mileage-tracker.cfapps.io\",\n" +
                 "  \"basePath\": \"/\",\n" +
                 "  \"tags\": [\n" +
                 "    {\n" +
