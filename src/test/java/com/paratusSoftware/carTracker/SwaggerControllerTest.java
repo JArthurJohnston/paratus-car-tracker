@@ -1,7 +1,7 @@
 package com.paratusSoftware.carTracker;
 
 
-import com.paratusSoftware.carTracker.documentation.SwaggerController;
+import com.paratusSoftware.carTracker.app.documentation.SwaggerController;
 import org.junit.Test;
 
 import java.nio.file.Files;

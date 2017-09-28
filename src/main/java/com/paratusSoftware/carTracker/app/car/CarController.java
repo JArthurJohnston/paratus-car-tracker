@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.car;
+package com.paratusSoftware.carTracker.app.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,4 +21,5 @@ public class CarController {
     public Car getOneCar(@RequestParam("id") int id){
         return service.getById(id);
     }
+
 }

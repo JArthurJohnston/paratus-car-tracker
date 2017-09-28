@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.documentation;
+package com.paratusSoftware.carTracker.app.documentation;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

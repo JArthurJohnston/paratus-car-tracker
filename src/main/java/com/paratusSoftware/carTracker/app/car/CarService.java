@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.car;
+package com.paratusSoftware.carTracker.app.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

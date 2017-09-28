@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.gasMileage;
+package com.paratusSoftware.carTracker.app.gasMileage;
 
 import lombok.Getter;
 
