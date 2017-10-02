@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.app.gasMileage;
+package com.paratusSoftware.carTracker.gasMileage;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

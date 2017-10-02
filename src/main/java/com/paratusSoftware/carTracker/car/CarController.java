@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.app.car;
+package com.paratusSoftware.carTracker.car;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;

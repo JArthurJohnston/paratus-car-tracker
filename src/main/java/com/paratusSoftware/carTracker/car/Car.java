@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.app.car;
+package com.paratusSoftware.carTracker.car;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

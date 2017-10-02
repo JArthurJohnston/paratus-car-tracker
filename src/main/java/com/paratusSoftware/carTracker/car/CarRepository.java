@@ -1,4 +1,4 @@
-package com.paratusSoftware.carTracker.app.car;
+package com.paratusSoftware.carTracker.car;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;

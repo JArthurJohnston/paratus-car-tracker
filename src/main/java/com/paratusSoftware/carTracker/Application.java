@@ -1,7 +1,12 @@
-package com.paratusSoftware.carTracker.app;
+package com.paratusSoftware.carTracker;
 
 import com.google.common.base.Predicate;
 import com.google.common.base.Predicates;
+import com.paratusSoftware.carTracker.gasMileage.Mileage;
+import com.paratusSoftware.carTracker.gasMileage.MileageRepository;
+import com.paratusSoftware.carTracker.location.Location;
+import com.paratusSoftware.carTracker.location.LocationRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
@@ -18,10 +23,29 @@ import static springfox.documentation.builders.PathSelectors.regex;
 @EnableSwagger2
 @SpringBootApplication
 public class Application {
+
+    @Autowired
+    private static LocationRepository locationRepository;
+    @Autowired
+    private static MileageRepository mileageRepository;
     
     public static void main(String[] args){
         SpringApplication.run(Application.class, args);
+//        initializeData();
     }
+
+    private static void initializeData(){
+        Location location1 = locationRepository.save(new Location(23234, 5643));
+        Location location2 = locationRepository.save(new Location(6548,327));
+        Location location3 = locationRepository.save(new Location(9840,6541));
+
+        mileageRepository.save(new Mileage(321, location2));
+        mileageRepository.save(new Mileage(242, location1));
+        mileageRepository.save(new Mileage(987, location3));
+
+    }
+
+
 
     @Bean
     public Docket swaggerDocumentation(){
